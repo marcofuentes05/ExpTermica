@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CameraSPlano : MonoBehaviour
 {
@@ -122,5 +123,9 @@ public class CameraSPlano : MonoBehaviour
         string text = " = " + lf.ToString() + "m2";
 
         longitudFinal.gameObject.GetComponent<Text>().text = text;
+    }
+    public void cambiarEscena(string nombre)
+    {
+        SceneManager.LoadScene(nombre);
     }
 }

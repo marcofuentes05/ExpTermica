@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CameraScript : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class CameraScript : MonoBehaviour
     public Text coeficiente;
     public Text longitudFinal;
     public GameObject cilindro;
+    public GameObject c2;
 
     int material;
     float lf;
@@ -39,7 +41,7 @@ public class CameraScript : MonoBehaviour
         ATT.gameObject.GetComponent<Text>().text = AT.value + " K";
 
         cilindro.gameObject.GetComponent<Transform>().localScale = new Vector3(1, Li.value, 1);
-
+        c2.gameObject.GetComponent<Transform>().localScale = new Vector3(1, Li.value, 1);
         if (animation)
         {
             cilindro.gameObject.GetComponent<Transform>().localScale += new Vector3(0,Al*10,0);
@@ -116,5 +118,10 @@ public class CameraScript : MonoBehaviour
         string text = " = " + lf.ToString();
 
         longitudFinal.gameObject.GetComponent<Text>().text = text;
+    }
+
+    public void cambiarEscena(string nombre)
+    {
+        SceneManager.LoadScene(nombre);
     }
 }

@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Expansion Termica.unity
+    guid: 1847214a3d020ad4da81f57db48c4acf
+  - enabled: 1
+    path: Assets/Scenes/Area.unity
+    guid: fa5fd5fcaeecf8c4e9327207c43621e5
   m_configObjects: {}
