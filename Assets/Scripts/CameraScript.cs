@@ -47,7 +47,7 @@ public class CameraScript : MonoBehaviour
             cilindro.gameObject.GetComponent<Transform>().localScale += new Vector3(0,Al*10,0);
             //animation = false;
         }
-        if (cilindro.gameObject.GetComponent<Transform>().localScale == new Vector3 (1,lf*10,1)){
+        if (cilindro.gameObject.GetComponent<Transform>().localScale == new Vector3 (1,lf*100,1)){
             animation = false;
         }
     }
